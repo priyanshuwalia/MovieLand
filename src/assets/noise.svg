@@ -1,0 +1,10 @@
+<svg width="200" height="200">
+  <!-- Define the filter -->
+  <filter id="grainy">
+    <feTurbulence type="turbulence" baseFrequency="0.65" numOctaves="3"  />
+    <feBlend in="SourceGraphic" in2="noise" mode="multiply" />
+  </filter>
+
+  <!-- Apply the filter to a rectangle -->
+  <rect width="200" height="200" fill="red" filter="url(#grainy)" />
+</svg>
